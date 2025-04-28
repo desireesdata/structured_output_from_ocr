@@ -25,7 +25,7 @@ entries = client.chat.parse(
     messages=[
         {
             "role": "system", 
-            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); d'une adresse; d'une abréviation et d'un numéro de référence, en général sous la forme XX-XX. Fais attention, il peut y avoir du bruit ou des informations manquantes. "
+            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); d'une adresse (les numéros d'arrondissements ou les étages doivent toujours être entre paranthèses, par exemple '(3e)'; Fais attention, il peut y avoir du bruit ou des informations manquantes. "
             "Voici mon texte :  "
         },
         {
