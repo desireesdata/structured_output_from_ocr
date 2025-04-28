@@ -1,10 +1,10 @@
-from config import api_key
-from input import get_text_from_file
+from features.config import api_key
+from features.input import get_text_from_file
 from mistralai import Mistral
 from pydantic import BaseModel
 import json
 
-texte = get_text_from_file("cinoche.txt", False)
+texte = get_text_from_file("./input/cinoche.txt", False)
 
 class Entry(BaseModel):
     nom: str
@@ -37,7 +37,7 @@ entries = client.chat.parse(
 
 entries_dict = json.loads(entries.choices[0].message.content)
 entry_list = EntryList(**entries_dict)
-with open('entries.json', 'w', encoding='utf-8') as f:
+with open('./output/entries_from_ocr.json', 'w', encoding='utf-8') as f:
     json.dump(entry_list.model_dump(), f, ensure_ascii=False, indent=2)
 
 print(entries.choices[0].message.content)

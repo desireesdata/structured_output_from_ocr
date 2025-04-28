@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 Then run `python3 main.py` or `python main.py`
 
-## Evaluation:
+## Evaluation:
 
 (à faire)
 - Faire vérité terrain
