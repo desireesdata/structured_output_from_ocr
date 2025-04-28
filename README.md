@@ -57,13 +57,14 @@ Aberrations à cause de l'OCR : se mêlent les margent et le labeur, d'où le pi
 Comment déterminer le seuil minimal de distance de LEv ? Voir si ce qui est couvert par la recherche floue
 
 ---
-FAire chemin global de la chaine de traitement
+Faire chemin global de la chaine de traitement
 
 1) Prompt pour générer données
-2) Evaluation quantitative avec vérité terrain ===> Projection (simplification) ==> matrice d'appariment en fonction des distances de lev (demadner à vérifier méthodo) ===> scoring; et fonction de densité de Prédiction /Expected 1, P1/E3, p1 étant prédiction == scoring
+2) Evaluation quantitative avec vérité terrain ===> Projection (simplification des chaines de caractères) ==> matrice d'appariment en fonction des distances de lev (demadner à vérifier méthodo) sorte d'étude des bijections ===> scoring; et (avec?) fonction de densité de Prédiction /Expected 1, P1/E3, p1 étant prédiction == scoring
 3) Valoriser avec données des Tables
 4) évalutation quali presque une détection d'hallucinations (visualisation des présence et absences)
-5) Débats / ciné
+5) Débats / ciné : tester la méthode sur l'un et l'autre corpus (**facultatif ?**)
+6) Tester avec d'autres modèles (LLama + outlines, Chat GPT, etc.)
 
 
 échantilloange et vérité terrain : prendre zone représentative: 5 groupes de pages.
