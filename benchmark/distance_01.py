@@ -2,15 +2,18 @@ from unidecode import unidecode
 from Levenshtein import distance
 import pandas as pd
 import plotly.express as px
+import re
 
 verite_terrain = pd.read_csv("truth_grnd_01.csv", delimiter='\t')
 sortie_structuree_via_llm = pd.read_csv("json_converted_01.csv", delimiter='\t')
 distance_for_each_lines = []
 
 def normalisation(nom :str, fonction: str, adresse:str)-> str:
-    the_concated = (nom + " " + str(fonction) + " " + adresse).lower()
-    the_concated = unidecode(the_concated)
-    return the_concated
+    the_concatened = (nom + " " + str(fonction) + " " + adresse).lower()
+    the_concatened = unidecode(the_concatened)
+    pattern = r'[^\w]' #suppression ponctuation... peut-être un peu "dur"
+    result = re.sub(pattern, "·", the_concatened)
+    return result
 
 #Distance Lev Colonne FONCTION
 for i in verite_terrain.index:
@@ -21,7 +24,7 @@ for i in verite_terrain.index:
         normalisation(sortie_structuree_via_llm['nom'][i],
                         sortie_structuree_via_llm['fonction'][i],
                         sortie_structuree_via_llm['adresse'][i])))
-    print(distance_for_each_lines[i])
+    # print(distance_for_each_lines[i])
 
 fig = px.bar(verite_terrain, x=verite_terrain.index, y=distance_for_each_lines, title="Distances de Levenshtein par ligne")
 fig.show()
