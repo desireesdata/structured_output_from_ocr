@@ -1,4 +1,13 @@
 def get_text_from_file(file: str, test: bool)->str:
+    """
+
+    Args:
+        file (str): nom du fichier
+        test (bool): true pour afficher le contenu du fichier
+
+    Returns:
+        str: retourne le contenu du fichier 
+    """
     try:
         txt = open(file, 'r')
         print("Fichier lu : ", txt, "\n")

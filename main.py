@@ -22,7 +22,8 @@ entries = client.chat.parse(
     messages=[
         {
             "role": "system", 
-            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); et enfin l'adresse. Fais attention, il peut y avoir du bruit. Voici mon texte :  "
+            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); et enfin l'adresse. Fais attention, il peut y avoir du bruit. "
+            "Voici mon texte :  "
         },
         {
             "role": "user", 
@@ -36,7 +37,7 @@ entries = client.chat.parse(
 
 entries_dict = json.loads(entries.choices[0].message.content)
 entry_list = EntryList(**entries_dict)
-with open('entries_cinoche.json', 'w', encoding='utf-8') as f:
+with open('entries.json', 'w', encoding='utf-8') as f:
     json.dump(entry_list.model_dump(), f, ensure_ascii=False, indent=2)
 
 print(entries.choices[0].message.content)
