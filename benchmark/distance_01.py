@@ -3,6 +3,7 @@ from Levenshtein import distance
 import pandas as pd
 import plotly.express as px
 import re
+import numpy as np
 
 verite_terrain = pd.read_csv("truth_grnd_01.csv", delimiter='\t')
 sortie_structuree_via_llm = pd.read_csv("json_converted_01.csv", delimiter='\t')
@@ -26,8 +27,10 @@ for i in verite_terrain.index:
                         sortie_structuree_via_llm['adresse'][i])))
     # print(distance_for_each_lines[i])
 
-fig = px.bar(verite_terrain, x=verite_terrain.index, y=distance_for_each_lines, title="Distances de Levenshtein par ligne")
+fig = px.bar(verite_terrain, x=verite_terrain.index, y=distance_for_each_lines, title=f"Distances de Levenshtein par ligne. La médiane est à {np.median(distance_for_each_lines)}")
 fig.show()
+
+print("la médiane est : ", np.median(distance_for_each_lines))
 
 # #La somme des distances de Levenshtein entre les mots individuels d'une liste n'est pas nécessairement égale à la distance de Levenshtein entre les chaînes concaténées des deux listes. 
 # #Distance Lev Colonne NOM
