@@ -16,4 +16,4 @@ def json_to_csv(json_file: str, csv_file: str):
     except Exception as e:
         print(f"Erreur : {e}")
 
-json_to_csv('../output/entries_from_ocr.json', 'json_converted.csv')
+json_to_csv('../output/entries_from_ocr.json', 'json_converted_01.csv')
