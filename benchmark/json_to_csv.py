@@ -10,7 +10,7 @@ def json_to_csv(json_file: str, csv_file: str):
         required_columns = ["nom", "fonction", "adresse"]
         if not all(column in df.columns for column in required_columns):
             raise ValueError("Le fichier JSON a un probleme")
-        df.to_csv(csv_file, sep=';', index=False, columns=required_columns)
+        df.to_csv(csv_file, sep='\t', index=False, columns=required_columns)
 
         print(f"Zou: {csv_file}")
     except Exception as e:

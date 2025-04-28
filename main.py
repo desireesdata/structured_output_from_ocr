@@ -2,6 +2,7 @@ from features.config import api_key
 from features.input import get_text_from_file
 from mistralai import Mistral
 from pydantic import BaseModel
+import pandas as pd
 import json
 
 texte = get_text_from_file("./input/cinoche.txt", False)
@@ -10,6 +11,8 @@ class Entry(BaseModel):
     nom: str
     fonction: str
     adresse : str
+    abreviations: str
+    reference_abreviations: str
 
 class EntryList(BaseModel):
     entry: list[Entry]
@@ -22,7 +25,7 @@ entries = client.chat.parse(
     messages=[
         {
             "role": "system", 
-            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); et enfin l'adresse. Fais attention, il peut y avoir du bruit. "
+            "content": "Extrait les informations relatives à chaque entrée. Chaque entrée est composé d'un nom (un nom propre, le nom d'une marque, etc.); d'une fonction (activité, métier, etc.); d'une adresse; d'une abréviation et d'un numéro de référence, en général sous la forme XX-XX. Fais attention, il peut y avoir du bruit ou des informations manquantes. "
             "Voici mon texte :  "
         },
         {
@@ -37,7 +40,7 @@ entries = client.chat.parse(
 
 entries_dict = json.loads(entries.choices[0].message.content)
 entry_list = EntryList(**entries_dict)
-with open('./output/entries_from_ocr.json', 'w', encoding='utf-8') as f:
+with open('./output/entries.json', 'w', encoding='utf-8') as f:
     json.dump(entry_list.model_dump(), f, ensure_ascii=False, indent=2)
 
 print(entries.choices[0].message.content)

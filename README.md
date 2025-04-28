@@ -11,9 +11,10 @@ Then run `python3 main.py` or `python main.py`
 ## Evaluation:
 
 (à faire)
-- Faire vérité terrain
-- normaliser les strings (ponctuation + bas de casse etc.)
-- calcul des distances 
+- Vérité terrain
+    - A partir de CSV plutôt que JSON 
+- Normaliser les strings (ponctuation + bas de casse etc.)
+- Calcul des distances 
 
 ### Idées
 
