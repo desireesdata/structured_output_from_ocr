@@ -68,3 +68,10 @@ Faire chemin global de la chaine de traitement
 
 
 échantilloange et vérité terrain : prendre zone représentative: 5 groupes de pages.
+
+---
+Après avoir testé vite fait avec la Cinémathèque, retour au JO. A été fait :
+
+1) Extraction via corpusense
+    - source choisie : https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item
+2) Matrice d'appariements
