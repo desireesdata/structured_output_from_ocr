@@ -75,4 +75,6 @@ Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, te
 1) Extraction via corpusense
     - source choisie : https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item
 2) Projection : 
-    - il y a des symboles égals (présent dans la source)
+    - il y a des symboles égals (présents dans la source)
+    - remplacement de tous les symboles de ponctuation par des points
+    - remplacement des majuscules par des basses casses
