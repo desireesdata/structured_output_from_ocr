@@ -70,8 +70,9 @@ Faire chemin global de la chaine de traitement
 échantilloange et vérité terrain : prendre zone représentative: 5 groupes de pages.
 
 ---
-Après avoir testé vite fait avec la Cinémathèque, retour au JO. A été fait :
+Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, tester / évaluer avec les vrais documents avec une situation "favorable" (scénario d'extraction colonne par colonne)
 
 1) Extraction via corpusense
     - source choisie : https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item
-2) Matrice d'appariements
+2) Projection : 
+    - il y a des symboles égals (présent dans la source)

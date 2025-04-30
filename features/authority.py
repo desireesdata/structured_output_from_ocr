@@ -4,7 +4,6 @@ from features.config import api_key
 from mistralai import Mistral
 from pydantic import BaseModel
 import json
-import time
 
 def scraping(url_:str)-> str:
     url = url_
