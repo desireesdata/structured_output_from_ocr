@@ -78,3 +78,6 @@ Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, te
     - il y a des symboles égals (présents dans la source)
     - remplacement de tous les symboles de ponctuation par des points
     - remplacement des majuscules par des basses casses
+3) Le calcul des distances : pas si évident de faire un choix sur la méthode car il faut considérer à la fois la structure (TED) et les différences entre les noeuds de chaque arbre ! Les "objets" sont des abres, pas des labels : on ne peut pas faire une matrice "à plat".
+    - Je pars du principe que la structure est un a priori nécessaire : tout calcul doit repose sur une TED strictement égale à zéro.
+    - Si 0 --> calcul distance de Levshtein entre chaque noeud cousin

@@ -10,4 +10,19 @@ def replace_caps_and_punct(obj):
         return re.sub(r'[^\w\s]', '.', unidecode(obj).lower())
     else:
         return obj
-    
+
+def extract_all_values(json_obj):
+    all_values = []
+
+    def recurse(obj):
+        if isinstance(obj, dict):
+            for value in obj.values():
+                recurse(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                recurse(item)
+        else:
+            all_values.append(obj)
+
+    recurse(json_obj)
+    return all_values
