@@ -16,7 +16,6 @@ class Action(BaseModel):
     references_page: list[str]
 
 class Interventions(BaseModel):
-    #resume: str
     interventions : list[Action]
 
 class Senateur(BaseModel):

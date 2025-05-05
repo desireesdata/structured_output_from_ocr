@@ -67,7 +67,7 @@ Faire chemin global de la chaine de traitement
 6) Tester avec d'autres modèles (LLama + outlines, Chat GPT, etc.)
 
 
-échantilloange et vérité terrain : prendre zone représentative: 5 groupes de pages.
+échantillonage et vérité terrain : prendre zone représentative: 5 groupes de pages.
 
 ---
 Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, tester / évaluer avec les vrais documents avec une situation "favorable" (scénario d'extraction colonne par colonne)
@@ -81,3 +81,7 @@ Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, te
 3) Le calcul des distances : pas si évident de faire un choix sur la méthode car il faut considérer à la fois la structure (TED) et les différences entre les noeuds de chaque arbre ! Les "objets" sont des abres, pas des labels : on ne peut pas faire une matrice "à plat".
     - Je pars du principe que la structure est un a priori nécessaire : tout calcul doit repose sur une TED strictement égale à zéro.
     - Si 0 --> calcul distance de Levshtein entre chaque noeud cousin
+
+___
+
+Ce qu'on veut : évaluer la qualité du JSON prédit en le comparant avec une vérité terrain. Pour ce faire, il faut vérifier si chaque valeur prédite est en bijection avec la vérité terrain. Mais dans le cas d'une application de l'ensemble de valeur de P vers la vérité terrain est une surjection, il faudra choisir le cable le plus pertinent avec la distance de Levenstein. Le cas injectif (oublis), il faudra réfléchir à une application qui va cette fois de l'autre sens ?

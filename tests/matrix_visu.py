@@ -33,7 +33,7 @@ except json.JSONDecodeError:
     print("Erreur lors du chargement du fichier f161_1_projected.json.")
 
 try:
-    with open('../output/test_bruit.json', 'r', encoding='utf-8') as file2:
+    with open('../output/f161.json', 'r', encoding='utf-8') as file2:
         json_obj.append(json.load(file2))
     all_values[1] = extract_all_values(json_obj[1])
 except FileNotFoundError:
@@ -61,8 +61,15 @@ for i in range(n1):
 
 # print(similarity_matrix)
 
-df = pd.DataFrame(similarity_matrix, index=text_values1, columns=text_values2)
+# df = pd.DataFrame(similarity_matrix, index=text_values1, columns=text_values2)
+# plt.figure(figsize=(15, 12))
+# sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein'})
+# plt.title("Matrice de Similarité basée sur la Distance de Levenshtein")
+# plt.show()
+
+log_similarity_matrix = np.log1p(similarity_matrix)
+df = pd.DataFrame(log_similarity_matrix, index=text_values1, columns=text_values2)
 plt.figure(figsize=(15, 12))
-sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein'})
-plt.title("Matrice de Similarité basée sur la Distance de Levenshtein")
+sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein (log)'})
+plt.title("Matrice de Similarité basée sur la Distance de Levenshtein (échelle logarithmique)")
 plt.show()
