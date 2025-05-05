@@ -53,12 +53,12 @@ else:
     n2 = len(text_values2)
     similarity_matrix = np.full((n1, n2), np.inf)  # Initialiser avec l'infini pour les distances non calculées
 
-    window_size = 5
+    window_size = 15
 
     for i in range(n1):
         for j in range(max(0, i - window_size), min(n2, i + window_size + 1)):
             distance = Levenshtein.distance(text_values1[i], text_values2[j])
-            similarity_matrix[i][j] = np.log(distance)
+            similarity_matrix[i][j] = distance
  
     # Remplacer les valeurs infinies et négatives par NaN
     similarity_matrix[similarity_matrix == np.inf] = np.nan
