@@ -92,6 +92,8 @@ ___
 
 - 1. Ma source : 
     ![alt text](img/01_table.jpeg "Title")
+
+- 2. Zoom
     ![alt text](img/02_zoom_table.jpg "Title")
 
 - 3. 
@@ -115,7 +117,7 @@ ___
 9. comparaison text / source
 ![alt text](img/09.png "title")
 
-10. Prompte + code 
+10. Prompt + code 
 ![alt text](img/10.png "title")
 
 11. JSON résultat
