@@ -85,3 +85,41 @@ Après avoir testé vite fait avec la Cinémathèque, retour au JO. Objectif, te
 ___
 
 Ce qu'on veut : évaluer la qualité du JSON prédit en le comparant avec une vérité terrain. Pour ce faire, il faut vérifier si chaque valeur prédite est en bijection avec la vérité terrain. Mais dans le cas d'une application de l'ensemble de valeur de P vers la vérité terrain est une surjection, il faudra choisir le cable le plus pertinent avec la distance de Levenstein. Le cas injectif (oublis), il faudra réfléchir à une application qui va cette fois de l'autre sens ?
+
+___
+
+#### Images DH
+
+- 1. Ma source : 
+    ![alt text](img/01_table.jpeg "Title")
+    ![alt text](img/02_zoom_table.jpg "Title")
+
+- 3. 
+![alt text](img/03.png "title")
+
+- 4.
+![alt text](img/04.png "title")
+
+- 5. sélection zone
+![alt text](img/05.png "title")
+
+- 6. analyse OCR
+![alt text](img/06.png "title")
+
+7. résultat + export texte
+![alt text](img/07.png "title") 
+
+8. exported text
+![alt text](img/08.png "title")
+
+9. comparaison text / source
+![alt text](img/09.png "title")
+
+10. Prompte + code 
+![alt text](img/10.png "title")
+
+11. JSON résultat
+![alt text](img/11.png "title")
+
+12. JSON vs Source
+![alt text](img/12.png "title")
