@@ -355,13 +355,13 @@ except FileNotFoundError:
 except json.JSONDecodeError:
     print("Erreurr chargement du fichier")
 
-# Créer une instance de JSONParseEvaluator
+# instance de JSONParseEvaluator
 evaluator = JSONParseEvaluator()
 
-# Calculer le score F1
+# score F1
 f1_score = evaluator.cal_f1([predicted_json], [ground_truth_json])
 print(f"F1 Score: {f1_score}")
 
-# Calculer l'exactitude basée sur la distance d'édition d'arbres normalisée (nTED)
+# exactitude basée sur la distance d'édition d'arbres normalisée (nTED)
 accuracy = evaluator.cal_acc(predicted_json, ground_truth_json)
 print(f"Accuracy (nTED-based): {accuracy}")
