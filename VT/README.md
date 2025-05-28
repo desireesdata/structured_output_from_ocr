@@ -40,4 +40,29 @@ Egalement le probleme de la précision des pages où sont déposés les amendeme
 
 Il arrive aussi que parfois, (assez rarement, à voir au moment de l'évaluation) que le LLM ignore des portions de phrases.
 
-L'hypothèse de d'une granularité plus basse, avec seulement des distictions entre les différentes actions, semble ne produire aucune erreur (en tout cas pour la correction de la VT). Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui génère du risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes".
+L'hypothèse de d'une granularité plus basse, avec seulement des distictions entre les différentes actions, semble ne produire aucune erreur (en tout cas pour la correction de la VT). 
+
+> exemple :
+
+```JSON
+ {
+      "nom": "Beaumont",
+      "prenom": "Jean",
+      "actions_relatives_a_l_intervenant": [
+        "Parle: discuss. d'un projet de loi portant fixation du budget général de l'exercice 1931-1932 (Agriculture), p. 477.",
+        "Demande à interpeller sur les mesures que compte prendre le Gouvernement pour prévenir les crises agricoles, notamment celles qui sévissent sur l'élevage national que préparent les importations massives de matières alimentaires, p. 1087; parle: fixation de la date de la discuss., p. 1130; développe son interpellation, p. 1287.",
+        "Parle : discuss. d'un projet de loi relatif à l'outillage national, p. 1667, 1674, 1708."
+      ]
+    },
+    {
+      "nom": "Bénard",
+      "prenom": "Léonus",
+      "actions_relatives_a_l_intervenant": [
+        "Parle: discuss. d'un projet de loi relatif au crédit colonial, p. 146, 148.",
+        "Dépose et lit son rapport sur un projet de loi désignant un nouveau lieu de déportation, p. 832."
+      ]
+    },
+```
+
+Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... 
+
