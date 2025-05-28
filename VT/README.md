@@ -40,7 +40,7 @@ Malheureusement, cette *distribution* des éléments de contexte (ou des moments
 
 Egalement le probleme de la précision des pages où sont déposés les amendements : parfois, il est précisé à quelle page un amendement a été déposé. Malheureusement, il est difficile de trancher s'il s'agit là aussi d'une autre action et sinon, comment séparer l'information sans complexifier encore le modèle, ce qui serait porteur de nouvelles erreurs.
 
-Il arrive aussi que parfois, (assez rarement, à voir au moment de l'évaluation) que le LLM ignore des portions de phrases.
+Il arrive aussi parfois, (assez rarement, à voir au moment de l'évaluation) que le LLM ignore des portions de phrases.
 
 L'hypothèse de d'une granularité plus basse, avec seulement des distictions entre les différentes actions, semble ne produire aucune erreur (en tout cas pour la correction de la VT). 
 
@@ -66,7 +66,7 @@ L'hypothèse de d'une granularité plus basse, avec seulement des distictions en
     },
 ```
 
-Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... Tout dépend aussi de quel historien.ne fait le traitement; ou encore de quel contexte de recherche il s'agit.
+Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... Tout dépend aussi de quel historien.ne fait le traitement; ou encore de quel contexte de recherche il s'agit. (Difficile de séparer l'outil technique de son contexte social de production comme dirait Simondon !... ou encore Karl Marx haha)
 
 Une autre solution intermédiaire (à voir si c'est intéressant) est de garder et tout le texte de la description (pages incluses) et les numéros de pages comme des entiers dans une liste à part. Exemple :
 
