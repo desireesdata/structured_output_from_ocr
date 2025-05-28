@@ -1,0 +1,23 @@
+
+
+Correction sortie TXT brut
+Export JSON  brut du TXT parfait
+
+Délire à cause du paragraphe qui commence :
+
+d'un projet de loi portant régularisation, ou-
+verture et annulation de crédits sur l'exer-
+cice 1930-1931 au titre du budget général et
+des budgets annexes, p. 1179. — = discuss.
+d'un projet de loi relatif aux établissements
+dangereux, insalubres ou incommodes, en
+qualité de rapporteur, p. 1533, 1535, 1536, 1537.
+— = discuss. d'un projet de loi relatif à l'ou-
+tillage national, p. 1646, 1707, 1708; son amen-
+dement, p. 1707.
+
+
+Ce qui est généré me pose question sur la manière dont je dois constituer la vérité terrain :
+les réptitions (qui n'existent pas) sont assez bien vues car elles donnent du contexte 
+
+en précisant un peu le prompt, j'ai de nouvelles erreurs (ex : bazile gaston est admis)

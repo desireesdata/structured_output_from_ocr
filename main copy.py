@@ -18,13 +18,14 @@ class Action(BaseModel):
 class Interventions(BaseModel):
     action : Action
 
-class Renvoi(BaseModel):
+class RenvoiAutreEntree(BaseModel):
     nom_entree_du_renvoi: str
 
 class Intervenant(BaseModel):
-    nom: str
+    nom_de_famille: str
     prenom : str
-    actions_relatives_a_l_intervenant: list[str]
+    role : str
+    actions_relatives_a_l_intervenant: list[Action] | list[RenvoiAutreEntree] # choisir entre l'une et l'autre classe !
 
 class IntervenantAuSenat(BaseModel):
     listes_des_intervenants: list[Intervenant]
@@ -40,9 +41,9 @@ def main():
 
                 "Il y a une entrée par personne."
 
-                "Chaque entrée se compose : du nom et du prénom d'un intervenant; parfois de son rôle (ce n'est pas toujours précisé); d'une liste d'actions qu'il a effectuées ou qui le concernent. Ce sont des informations à relever."
+                "Chaque entrée se compose : du nom et du prénom d'un intervenant; parfois de son rôle (ce n'est pas toujours précisé : quand il n'y a pas d'indications, c'est qu'il s'agit d'un sénateur); d'une liste d'actions qu'il a effectuées ou qui le concernent. Ce sont des informations à relever."
 
-                "Chaque action concernant un intervenant est lié à un ou plusieurs numéros de page : il faut également les indiquer. Quand il y a une référence de page, vous pouvez être certain qu'il s'agit d'une action concernant l'intervenant. Je veux donc que vous me donniez toutes ces informations quand vous le pouvez."
+                "Chaque action (pouvant comprendre différents moments, ils sont en général séparés par un point-virgule) concernant un intervenant est lié à un ou plusieurs numéros de page : il faut également les indiquer. Quand il y a une référence de page, vous pouvez être certain qu'il s'agit d'une action concernant l'intervenant. Je veux donc que vous me donniez toutes ces informations quand vous le pouvez."
                 
                 "Dans le cas où une entrée n'expose pas des actions ou des faits concernant un intervenant, alors il s'agit d'un renvoi d'index. Dans ce cas, au lieu de mentionner des interventions, indiquez la référence du renvoi. Ces renvois sont en général des noms/prénoms d'intervenants. Ces renvois ne font donc pas référence à des pages, mais à d'autres entrées nominales. Quand il y a un renvoi d'index, alors il n'est pas question d'interventions."
                 ""

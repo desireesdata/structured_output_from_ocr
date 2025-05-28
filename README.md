@@ -125,3 +125,17 @@ ___
 
 12. JSON vs Source
 ![alt text](img/12.png "title")
+
+La question de la complexité des modèles de données. Proposer 2/3 modèles des données +- complexes: effet """pervers""" du prompt; (prompt dépend du pydantic)
+
+Le biais inductif : plus le modèle est complexe (et donc le prompt) plus on capture les éléments fins; tandis qu'avec une description générale qui donne touours une distance à l'optimum mais sans effondrement.
+
+Justifier la vérité de terrain json : est-
+- txt vt ok
+  
+
+Quel modèle de représentation?
+
+Le modèle sait "distribuer" la sémantique.
+
+On pourrait utiliser une architecture type bert pour "pointer" la sortie vers vers l'enteée
