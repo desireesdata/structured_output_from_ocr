@@ -66,3 +66,51 @@ L'hypothèse de d'une granularité plus basse, avec seulement des distictions en
 
 Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... 
 
+Une autre solution intermédiaire (à voir si c'est intéressant) est de garder et tout le texte de la description (pages incluses) et les numéros de pages comme des entiers dans une liste à part. Exemple :
+
+```JSON
+
+  "listes_des_intervenants": [
+    {
+      "nom": "Babin-Chevaye",
+      "prenom": "",
+      "actions_relatives_a_l_intervenant": [
+        "Est proclamé secrétaire du Sénat, p. 8.",
+        "Parle: discuss. d'un projet de loi portant fixation du budget général de l'exercice 1931-1932 (Instruction publique), p. 582; (Postes, télégraphes et téléphones), p. 719."
+      ],
+      "references_pages": [
+        8,
+        582,
+        719
+      ]
+    },
+    {
+      "nom": "Bachelet",
+      "prenom": "Alexandre",
+      "actions_relatives_a_l_intervenant": [],
+      "references_pages": []
+    },
+    {
+      "nom": "Barthou",
+      "prenom": "Louis",
+      "actions_relatives_a_l_intervenant": [
+        "Son allocution à l'occasion du décès du maréchal Joffre, p. 2.",
+        "Parle: discuss. d'un projet de loi relatif à l'exploitation des lignes de l'aéropostale, p. 394, 396, 397, 399.",
+        "Son amendement déposé au cours de la discuss. d'un projet de loi portant ouverture et annulation de crédits sur l'exercice 1930-1931 au titre du budget général et des budgets annexes, p. 1211.",
+        "Parle : rectification au procès-verbal, p. 1237."
+      ],
+      "references_pages": [
+        2,
+        394,
+        396,
+        397,
+        399,
+        1211,
+        1237
+      ]
+    }
+  ]
+```
+
+Ou bien de demander au LLMS de ne pas séparer les différents moments d'une action. On le voit, il y a beaucoup de possibilités et qui dépendent ici du prompting. Malheureusement, la complexité de la formulation pourrait rendre difficile le passage du particulier au général, sur d'autres pages du J.O. réputées inconnues...
+
