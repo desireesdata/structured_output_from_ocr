@@ -66,7 +66,7 @@ L'hypothèse de d'une granularité plus basse, avec seulement des distictions en
     },
 ```
 
-Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... 
+Certes, les numéros de pages sont solidaires au texte, mais une extraction *a posteriori* via une regex est moins incertain que de laisser le LLM à produire des distinctions/séparations qui impliquent un risque de confusion, car le forçant à trancher (cf. le cas des amendements déposés et/ou du probleme de la distribution du contexte). L'approche "moins c'est plus" pose le probleme que l'historien/utilisateur de l'outil corpusense qui voudrait exploiter le texte, n'aura pas les données "toutes prêtes" car il faudrait extraire les numéros de page avec la Regex, sauf si cette extraction fait partie du workflow... Tout dépend aussi de quel historien.ne fait le traitement; ou encore de quel contexte de recherche il s'agit.
 
 Une autre solution intermédiaire (à voir si c'est intéressant) est de garder et tout le texte de la description (pages incluses) et les numéros de pages comme des entiers dans une liste à part. Exemple :
 
@@ -89,8 +89,7 @@ Une autre solution intermédiaire (à voir si c'est intéressant) est de garder 
     {
       "nom": "Bachelet",
       "prenom": "Alexandre",
-      "actions_relatives_a_l_intervenant": [],
-      "references_pages": []
+      "nom_entree_du_renvoi": "V. Alexandre Bachelet"
     },
     {
       "nom": "Barthou",
