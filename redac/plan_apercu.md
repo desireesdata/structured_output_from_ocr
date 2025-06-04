@@ -16,7 +16,7 @@ Plan mémoire :
     
     - Question de la valorisation des "fonds dormants". Le cas du J.O.
     
-    - Mentionner les approches LLMs, vs les approches Bert (utilisées pour SODUCO)
+    - Mentionner texte d'OCR + les approches LLMs, vs les approches Bert (utilisées pour SODUCO) pour leur extraction sémantique
   
   - Conclure intro sur mon positionnement/rôle : du besoin de mettre à disposition des outils d'évaluation, avec le J.O. comme cas d'étude, pour pouvoir avoir une utilsation raisonnée / motivée des outils en SHS, comportant des biais.
 
@@ -72,7 +72,7 @@ Plan mémoire :
     
     - Exemple avec la Table. Parler du JSON
   
-  - Fiabilité de la génération structurée (exposition de la méthode d'évaluation)
+  - Fiabilité de la sortie structurée (exposition de la méthode d'évaluation)
     
     - Exposer risques / problème (hallucinations, ici avec une température à zéro, concernent les mauvaises attributions du LLM. Biais OCR se répercutent ? Question du prompting, de ses limitations. Mentionner des différences avec approche BERT.
     
