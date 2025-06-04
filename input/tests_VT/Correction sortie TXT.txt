@@ -21,3 +21,77 @@ Ce qui est généré me pose question sur la manière dont je dois constituer la
 les réptitions (qui n'existent pas) sont assez bien vues car elles donnent du contexte 
 
 en précisant un peu le prompt, j'ai de nouvelles erreurs (ex : bazile gaston est admis)
+
+
+stats éléments importés (origination, etc)
+Reinjecter sortie json dans XML/EAD
+génération template XML/EAC
+ajout formulaire de contextualisation
+	- télécharge liste communes départements
+- à développer : si commune; si région; si service décentralisé
+- affichage version XML/EAD des vedettes à coté json
+- illustration workflow façon ligne de métro
+- pouvoir retoucher vedettes
+- distance de lev pour détections communes à partir localisaton
+- pourcentage de producteur sans notice (avec proposition de génération de notice)
+- visualisation écart IR par rapport à un modèle déterminé par une politique d'indexation
+- Proposer TOP 5 des notices les plus proches, si oui utiliser ces notices pour l'indeaxtion, sinon Wikidata pour juste obtenir un URI. Sinon, mettre dans un rapport qu'il faudra créer telle notice pour telle autorité
+- exports PDF ou HTML rapports
+
+curl 'https://geo.api.gouv.fr/departements/90/communes
+
+Dans la partie application de mon code (dans dekstop-app), il y a des visualisations. Le deuxième tableau, "indicateurs de qualité" indique différentes choses et notamment le nombre de balises origination avec un attribut "authfilenumber"; le nombre de balises origination avec un attribut "normal". C'est une erreur de ma part : je voudrais plutôt indiquer 1) le nombre de balises origination contenant soit une balise geogname avec un attribut "authfilenumber" non vide; 2)  le nombre de balises origination contenant soit une balise corpname avec un attribut "authfilenumber" non vide; 3)  le nombre de balises origination contenant soit une balise persname avec un attribut "authfilenumber" non vide; 4)  le nombre de balises origination contenant soit une balise famname avec un attribut "authfilenumber" non vide
+
+<origination>
+	<corpname source="https://francearchives.gouv.fr/agent/224174370"
+	authfilenumber=""
+	role="producteur | service versant"
+	normal="">
+	</corpname>
+</origination>
+
+/// Control access
+
+<function>
+</function>
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/exports/json
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom%20LIKE%20%22Rennes%22&limit=10
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom LIKE "Rennes"&limit=10
+
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom%20LIKE%20%22Rennes%22&limit=10
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom LIKE%20 'Rennes'&limit=10
+
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom%20LIKE%20%22Cabinet du préfet de la Moselle. - 1377W (1970-1984)%22&limit=10
+
+https://api-lannuaire.service-public.fr/api/explore/v2.1/catalog/datasets/api-lannuaire-administration/records?where=nom%20LIKE%20%22Rennes%22%20AND%20startswith(code_insee_commune,%20%2235%22)
+
+
+
+Cabinet du préfet de la Moselle. - 1377W (1970-1984)"
+
+
+([D|d]épartement(?=[ |,]))
+([D|d]énomination)
+([R|r]essort)
+(Département)
+((?<=[\(|,\s])département(?=,))
+
+
+
+(Département)|((?<=[\(|,\s])département(?=,))
+([D|d]énomination)
+([R|r]essort)
+(Commune)
+(commune[\s|-]siège)
+(commune chef-lieu)
+
+
+Données de sagouin :
+(^D[é|e]partement)|(d[é|e]partment)|(d[é|e]partement(?=[,| ]))
+(Commune)|([c|C]ommune(?=,))

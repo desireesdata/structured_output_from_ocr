@@ -1,0 +1,46 @@
+Je voudrais un autre tableau vous visualiser une information. Je ne veux rien ajouter aux visualisations qui existent déjà mais rajouter une visualisation, par exemple en barres, qui montre pour chaque document XML qui a des URI, la source des URI. 
+
+Ces URI peuvent provenir de wikidata; de la BnF; de Sudoc; de IDRef; de VIAF. En général l'attribut "source" l'indique mais; dans le cas ou cet attribut est vide, on peut s'aider du contenu de source pouvant contenir, respectivement, "wikidata", bnf.f
+
+
+Génère moi une analyse à partir des statiques (en tableau) que je te soumets. Elles concernent la qualité de l'indexation des instruments de recherche en archivistique. 
+
+Avant tout, sache qu'un instrument de recherche très bien indexé comporte un producteur du fonds identifié (balisé avec la balise <origination>); et au moins un <geogname> pour placer un élément de contexte. Chacun de ces éléments doivent avoir une URI (un attribut authfilenumber non-vide).
+
+Dans le cas où ces balises sont renseignées mais sans URI, alors il faut effectuer une recherche de ces URI; et éventuellement en renseigner la thématique avec <subject>
+
+IR à indexer :
+
+Note. La granularité et l'évaluation de la qualité de l'indexation dépend de ce qu'on veut -- et donc d'une politique d'indexation définie au regard des systèmes d'informations à qui elles se destinent. Cependant, une exigeance minimale commune à toute institution d'archives pourrait être, au niveau haut :
+
+- ORIGINATION + au moins un PERSNAME ou un CORPNAME ou un FAMNAME avec URI
+- au moins un SUBJECT (thématique)
+
+Cette indexation minimale permet d'identifier le producteur, son contexte géographique et des URI pour désambiguiser et avoir une porte d'entrée pour le liage de données. 
+
+La thématique semble ici facultative, mais on considère aussi que cette indexation s'adresse aux usagers des archives, pouvant avoir besoin d'une idée générale via l'information thématique pour approcher un fonds. 
+Cette indexation minimale permet également un affinage ultérieur car le croisement des entités identifiées avec une URI permettant de restreindre les tentatives d'enrichissements futurs.
+
+Voici donc les IR sans :
+- ORIGINATION (ou ORIGINATION sans URI)
+- GEOGNAME (ou GEOGNAME sans URI)
+
+Si un IR ne coche pas
+
+- Rien faire
+- Recherche subject
+- Recherche URI
+- Recherche URI et subject
+- Recherche (origination[corp | pers] + geogname) + URI 
+- Recherche (origination[corp | pers] + geogname) + URI + subject
+- Recherche totale (origination[corp | pers] + geogname) + URI + subject + persname et corpname différents de origination
+
+
+S'il n'y a pas de <origination> alors l'instrument de recherche n'a pas une bonne indexation. S'il un origination; au moins un geogname; et d'autres balises renseignées, alors c'est très bien. Sinon, c'est à désirer.
+
+
+Je voudrais maint
+
+
+
+
