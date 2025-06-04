@@ -37,6 +37,7 @@ ajout formulaire de contextualisation
 - visualisation écart IR par rapport à un modèle déterminé par une politique d'indexation
 - Proposer TOP 5 des notices les plus proches, si oui utiliser ces notices pour l'indeaxtion, sinon Wikidata pour juste obtenir un URI. Sinon, mettre dans un rapport qu'il faudra créer telle notice pour telle autorité
 - exports PDF ou HTML rapports
+- SAS de traitements, traitement spécifiques par lots
 
 curl 'https://geo.api.gouv.fr/departements/90/communes
 
@@ -95,3 +96,65 @@ Cabinet du préfet de la Moselle. - 1377W (1970-1984)"
 Données de sagouin :
 (^D[é|e]partement)|(d[é|e]partment)|(d[é|e]partement(?=[,| ]))
 (Commune)|([c|C]ommune(?=,))
+
+
+" title="0 avec " onclick="showPieTooltip(this)" style="background: #FF6384; display: inline-block; margin-right: 2px;"> 0	
+
+
+
+A la suite des visualisations, je voudrais ajouter, pour chaque document XML, un bilan :
+A) Si le document ne comporte pas de balises origination, ou que la balise origination ne contient aucun noeud textuel, dire "Le document [...] ne semble pas exposer de façon explicite le nom du producteur du fonds; il doit être renseigné".
+
+===>
+
+B) Si le document comporte des balises origination avec un ou des noeuds textuels, mais sans <persname> ni <corpname> ni <famname> ni <geogname>, il faut dire "Le document semble exposer des informations sur le producteur du fonds, mais il faut préciser de quel type il s'agit ! (corpname, persname, famname voire geogname)".
+
+
+
+C) Si le document comporte des balises origination avec un ou des noeuds textuels et avec au moins ou un persname, ou un corpname ou un famname ou un geogname mais avec un attribut authfilenumber vide pour ces champs il faut dire : "Le producteur du fonds semble bien renseigné; mais il faut ajouter l'URI".
+
+====> CHERCHER URI via ORIGINATION
+(programme existe déjà du coup)
+
+D) Si le document comporte des balises origination non vide avec au moins ou un persname, ou un corpname ou un famname ou un geogname avec une URI indiquée, alors il faut dire "Le producteur du fonds semble bien renseigné."
+
+====> Vérifier + générer données entrainement
+
+A la suite des visualisations, je voudrais ajouter, pour chaque document XML, un bilan :
+Si le document ne comporte pas de balises origination, ou que la balise origination ne contient aucun noeud textuel, dire "Le document [...] ne semble pas exposer de façon explicite le nom du producteur du fonds; il doit être renseigné".
+Si le document comporte des balises origination avec un ou des noeuds textuels, mais sans <persname> ni <corpname> ni <famname> ni <geogname>, il faut dire "Le document semble exposer des informations sur le producteur du fonds, mais il faut préciser de quel type il s'agit ! (corpname, persname, famname voire geogname)".
+Si le document comporte des balises origination avec un ou des noeuds textuels et avec au moins ou un persname, ou un corpname ou un famname ou un geogname mais avec un attribut authfilenumber vide pour ces champs il faut dire : "Le producteur du fonds semble bien renseigné; mais il faut ajouter l'URI".
+Si le document comporte des balises origination non vide avec au moins ou un persname, ou un corpname ou un famname ou un geogname avec une URI indiquée, alors il faut dire "Le producteur du fonds semble bien renseigné."
+
+
+Je voudrais enrichir dans l'application, le "bilan par document", et notamment à propos des balises <controlaccess> des documents XML importés :
+
+S'il n'y a aucune balise controlaccess dans l'ensemble du document XML, dire : "Aucune balise controlaccess n'est renseignée.".
+
+Sinon s'il y a au moins une balise controlaccess enfant direct de archdesc, et contenant des noeuds textuels, dire : "L'ensemble documentaire décrit bénéficie, grâce à la balise controlaccess, d'un moins un point d'entrée au niveau haut de l'instrument de recherche."
+Et si ces noeuds textuels sont balisés soit par persname, soit par corpname soit par geogname soit par famname, soit par subject, exposer les balises existantes "(persname)" si'il y a un persname; "(corpname)" s'il y a un corpname, etc.
+Ensuite compter les URI (attributs authfilenumber non vides des balises persname, corpname, geogname, subject, famname) et exposer le pourcentage de balises en ayant une. Seule doivent être prise en compte persname, corpname, geogname, subject, famname : "[X]% des entités disposent d'une URI.". Si c'est 0%, dire "Aucune URI n'est indiquée".
+
+S'il y a des balises controlaccess n'étant pas le ou les enfants de archdesc, mais étant enfant(s) de l'élément <c>, ajouter : 
+"L'instrument de recherche semble bénéficier d'une indexation plus fine, au niveau d'unités documentaires décrites". Et, comme précédemment, indiquer le pourcentage de celles qui ont une URI.
+Si il n'y a aucune balise controlaccess en plus de celle dans le archdesc, ajouter : "L'instrument de recherche ne bénéficie pas, en revanche, d'une indexation fine au niveau des unités documentaires"
+
+
+Dans le cas où les documents importés ne sont pas des versions réduites, je voudrais qu'on puisse appliquer le traitement que sur la partie haute. Je voudrais donc ajouter une option ou une alerte lorsqu'on lance le traitement afin de choisir le faire sur une partie ou non
+
+J'ai tenté de compiler mon application Electron avec npm run build, juste pour voir. Le fichier APPImage fait 3,4 Go, ce qui est énorme. J'aimerai, sans que ça impacte le fonctionnement de l'application, que vous :
+
+    Vérifiez les dépendances : Assurez-vous que vous n'incluez pas de dépendances inutiles. Utilisez des outils comme electron-packager ou electron-builder pour empaqueter votre application, car ils permettent de mieux contrôler ce qui est inclus.
+
+    Utilisez electron-builder : C'est un outil puissant pour empaqueter et construire des applications Electron prêtes à être distribuées. Il offre des options pour réduire la taille de l'application finale.
+
+    Exclure les fichiers inutiles : Configurez votre outil de construction pour exclure les fichiers et dossiers qui ne sont pas nécessaires à l'exécution de l'application.
+
+    Optimisez les ressources : Assurez-vous que les images et autres ressources sont optimisées pour le web. Utilisez des outils pour compresser les images.
+
+    Utilisez des scripts de build : Configurez correctement vos scripts de build dans package.json pour utiliser des outils comme webpack pour regrouper et minimiser votre code JavaScript.
+
+    Vérifiez les modules natifs : Si vous utilisez des modules natifs, assurez-vous qu'ils sont compilés pour la bonne architecture et plateforme cible.
+
+    Analysez le contenu de votre application : Après la construction, examinez le contenu du dossier de sortie pour voir ce qui prend de l'espace et identifier les fichiers superflus.
+ 
