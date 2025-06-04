@@ -1,10 +1,18 @@
-J'ai choisi trois niveaux de granularité :
+Source : 
+
+![https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.highres "JO, f161, tables du Sénat") .
+
+### Notes 
+
+Pour les VT, j'ai choisi quatre niveaux de granularité :
 
 - un niveau "haut" avec 1) des rôles (qui précisent si l'intervenant au Sénat n'est pas un sénateur, par exemple un ministre ou un secrétraire); 2) une liste d'actions concernant l'intervenant auxquelles sont toutes associées 3) des références de pages (int) sauf si 4) il s'agit d'un renvoi vers une autre entrée
 
 - un niveau "moyen" qui est la même chose que le niveau haut moins les rôles
 
 - un niveau "bas" où les références de pages ne sont pas extraites comme des entiers, mais font parties de la description.
+
+- une niveau "épuré" ou seuls les noms des sénateurs et les pages où ils apparaissent sont mentionnés (utile pour faire un "Zeitgeist-like" de Google par exemple)
 
 Plus le niveau de granularité est haut, plus il y a d'erreurs; car il y a *par exemple* la difficulté pour le LLM de bien distribuer les descriptions.
 
