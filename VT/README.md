@@ -124,3 +124,34 @@ Une autre solution intermédiaire (à voir si c'est intéressant) est de garder 
 Ou bien de demander au LLMS de ne pas séparer les différents moments d'une action. On le voit, il y a beaucoup de possibilités et qui dépendent ici du prompting. Malheureusement, la complexité de la formulation pourrait rendre difficile le passage du particulier au général, sur d'autres pages du J.O. réputées inconnues...
 
 On voit que le probleme de constituer une vérité terrain semble simple de prime abord. Mais la structuration des données, même dans un scénario optimal de machines avec 100% de succès qu'est censé représenter la VT, implique quand même de trancher et d'abandonner certaines spécifictés documentaires, à l'instar celles des Tables et ce malgré la rigueur de la composition. On pourrait bien sur établir un niveau de granularité extrêmement fin qui rendent compte des spécificités sur une ou deux pages.... mais impossible de le savoir *a priori* pour des dizaines, des centaines voire des milliers de page. Faire un modèle de représentation des données implique nécessairement de "gommer" le grain atomique de la matière documentaire -- et le commentaire le plus exhaustif de quelque chose c'est la chose elle-même comme a du dire Todorov (je crois) dans "Poétique".
+
+#### NB : autre proposition
+
+Pour effectuer un Zeitgeist-like (façon Google), une autre proposition, sans les actions des sénateurs :
+
+```JSON
+{
+            "nom": "Boivin-Champeaux",
+            "references_page": [
+                1,
+                344,
+                376,
+                379,
+                406,
+                784,
+                1590
+            ]
+        },
+        {
+            "nom": "Bompard Maurice",
+            "references_page": [
+                754
+            ]
+        },
+        {
+            "nom": "Bon",
+            "references_page": [
+                1417
+            ]
+        },
+```
