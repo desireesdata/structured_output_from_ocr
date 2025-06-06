@@ -52,6 +52,12 @@ Dans la partie application de mon code (dans dekstop-app), il y a des visualisat
 </origination>
 
 /// Control access
+<origination id="vEADette-YYYY-MM-DD">
+	<corpname | persname | famnname></>
+</origination>
+
+<controlaccess id="vEADette-YYYY-MM-DD">
+</controlaccess
 
 <function>
 </function>
@@ -118,7 +124,7 @@ C) Si le document comporte des balises origination avec un ou des noeuds textuel
 
 D) Si le document comporte des balises origination non vide avec au moins ou un persname, ou un corpname ou un famname ou un geogname avec une URI indiquée, alors il faut dire "Le producteur du fonds semble bien renseigné."
 
-====> Vérifier + générer données entrainement
+====> FACULTATIF / A FAIRE PLUS TARD : Vérifier + générer données entrainement
 
 A la suite des visualisations, je voudrais ajouter, pour chaque document XML, un bilan :
 Si le document ne comporte pas de balises origination, ou que la balise origination ne contient aucun noeud textuel, dire "Le document [...] ne semble pas exposer de façon explicite le nom du producteur du fonds; il doit être renseigné".
