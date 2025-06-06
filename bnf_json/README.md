@@ -1,9 +1,18 @@
+**1931**.
+
+- [Tables nominative du Sénat (classement par ordre alphabétique)](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item) ---> [Débats parlementaires](https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931)
+- [Tables des travaux parlementaires (classement thématique)](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f207.item) ---> [Débats parlementaires](https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931)
+
 # Notes
 
 Les données cleanées sont celles du fichier `data_1931.csv`
 
 > Des données ont été ajoutées à la main, car lacunaires (celles du 2 avril): 
 `33	https://gallica.bnf.fr/ark:/12148/cb34363182v/date19310402	2	4	https://gallica.bnf.fr/ark:/12148/bpt6k6220642n.item	https://gallica.bnf.fr/ark:/12148/bpt6k6220642n/manifest.json	['933', '934']`
+
+Notes : je n'ai pas vérifié s'il y avait des retards entre les séances et les comptes-rendus. Dates à prendre avec des pincettes
+
+> https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931
 
 ## Récupérer tous les J.O. d'une année 
 

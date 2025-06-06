@@ -164,3 +164,20 @@ J'ai tenté de compiler mon application Electron avec npm run build, juste pour 
 
     Analysez le contenu de votre application : Après la construction, examinez le contenu du dossier de sortie pour voir ce qui prend de l'espace et identifier les fichiers superflus.
  
+ 
+ ["Voici la proposition n°0 : <30J - Fonds des architectes Boille (1876-2005)>. Au regard du référentiel, la forme autorisée la plus proche de <J - Fonds architectes Boille (-)> est : [Conseil régional de l'ordre des architectes (Occitanie, France)] avec une similarité de 0.34", "Voici la proposition n°1 : <Fonds des architectes Boille>. Au regard du référentiel, la forme autorisée la plus proche de <Fonds architectes Boille> est : [Conseil régional de l'ordre des architectes (Occitanie, France)] avec une similarité de 0.34"]
+
+
+
+["Voici la proposition n°0 : <proposition>30J - Fonds des architectes Boille (1876-2005)</proposition>. Au regard du référentiel, la forme autorisée la plus proche de <J - Fonds architectes Boille (-)> est : [Conseil régional de l'ordre des architectes (, France)] avec une similarité de 0.36", "Voici la proposition n°1 : <proposition>Fonds des architectes Boille</proposition>. Au regard du référentiel, la forme autorisée la plus proche de <Fonds architectes Boille> est : [Conseil régional de l'ordre des architectes (, France)] avec une similarité de 0.36"]
+début prompting
+
+ Chargement json...
+{
+  "numero_proposition": 0,
+  "producteur_le_plus_probable": "Conseil régional de l'ordre des architectes",
+  "forme_autorisee_proche": "Conseil régional de l'ordre des architectes",
+  "type_de_la_proposition": "institution",
+  "correspondance_entre_producteur_et_forme_autorisee": "OUI"
+}
+
