@@ -23,6 +23,8 @@ class Renvoi(BaseModel):
 
 class Intervenant(BaseModel):
     nom: str
+    prenom : str
+    actions_relatives_a_l_intervenant: list[str]
     references_pages: list[int]
 
 class IntervenantAuSenat(BaseModel):
@@ -59,7 +61,7 @@ def main():
     )
     entries_dict = json.loads(entries.choices[0].message.content)
     entry_list = IntervenantAuSenat(**entries_dict)
-    with open('./output/vt/test_epuree_from_corrected_text.json', 'w', encoding='utf-8') as f:
+    with open('./output/vt/corrected_page_2_OCR_VT_-_____.json', 'w', encoding='utf-8') as f:
         json.dump(entry_list.model_dump(), f, ensure_ascii=False, indent=2)
     print(entries.choices[0].message.content)  
     return "Success ! \n \n \n"  

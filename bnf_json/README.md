@@ -1,7 +1,7 @@
 **1931**.
 
 - [Tables nominative du Sénat (classement par ordre alphabétique)](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f161.item) ---> [Débats parlementaires](https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931)
-- [Tables des travaux parlementaires (classement thématique)](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f207.item) ---> [Débats parlementaires](https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931)
+- [Tables des travaux parlementaires (classement thématique)](https://gallica.bnf.fr/ark:/12148/bpt6k65430703/f207.item) ---> [Débats parlementaires](https://gallica.bnf.fr/ark:/12148/cb34363182v/date1931) (pp. 1-76 : Chambre + Sénat; pp. 77-92 : Annexes des tables des travaux parlementaires, dédiées aux "questions écrites")
 
 # Notes
 
