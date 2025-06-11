@@ -155,3 +155,22 @@ Pour effectuer un Zeitgeist-like (façon Google), une autre proposition, sans le
             ]
         },
 ```
+
+## Produire résultats statistiques à partir de la VT (page 2):
+
+### A) CREER DES MATRICES
+Avec Modèle épuré
+	- 1. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
+	- 2. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles
+	- 3. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
+	- 4. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
+
+Aevc Modèle Moyen
+	- 5. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
+	- 6. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles
+	- 7. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
+	- 8. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
+
+1. 
+	
+B) BIEN APPAREILLER

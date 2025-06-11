@@ -25,7 +25,7 @@ all_values = ["", ""]
 
 # VT
 try:
-    with open('../VT/VT_01_just_pages_and_names.json', 'r', encoding='utf-8') as file1:
+    with open('../VT/VT_sortie_structuree/VT_01_just_pages_and_names.json', 'r', encoding='utf-8') as file1:
         json_obj.append(json.load(file1))
     all_values[0] = extract_all_values(json_obj[0])
 except FileNotFoundError:
@@ -46,10 +46,10 @@ except json.JSONDecodeError:
 text_values1 = all_values[0]
 text_values2 = all_values[1]
 
-# print("Valeurs extraites du premier JSON :")
-# print(text_values1)
-# print("\nValeurs extraites du second JSON :")
-# print(text_values2)
+print("Valeurs extraites du premier JSON :")
+print(text_values1)
+print("\nValeurs extraites du second JSON :")
+print(text_values2)
 
 n1 = len(text_values1)
 n2 = len(text_values2)
