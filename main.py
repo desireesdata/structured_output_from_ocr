@@ -9,7 +9,8 @@ import json
 
 model = "ministral-8b-latest"
 client = Mistral(api_key=api_key)
-texte = get_text_from_file("./input/tests_VT/corrected_page_2_OCR_VT.txt", False)
+texte = get_text_from_file("./VT/corpusense_zones_manuelles.txt", False)
+# texte = get_text_from_file("./input/tests_VT/corrected_page_2_OCR_VT.txt", False)
 
 class Action(BaseModel):
     description_action:str

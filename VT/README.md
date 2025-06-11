@@ -161,8 +161,8 @@ Pour effectuer un Zeitgeist-like (façon Google), une autre proposition, sans le
 ### A) CREER DES MATRICES
 Avec Modèle épuré
 	- 1. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
-	- 2. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles
-	- 3. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
+	- 2. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles via CORPUSENSE
+	- 3. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection via CORPUSENSE 
 	- 4. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
 
 Aevc Modèle Moyen
@@ -171,6 +171,10 @@ Aevc Modèle Moyen
 	- 7. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
 	- 8. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
 
-1. 
-	
+A.1 Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
+![A1](img/A_1.png)
+
+1.2 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles via CORPUSENSE
+![A2](img/A_2.png)	
+
 B) BIEN APPAREILLER
