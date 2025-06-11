@@ -23,8 +23,9 @@ def extract_all_values(json_obj):
 json_obj = []
 all_values = ["", ""]
 
+# VT
 try:
-    with open('../output/f161_1_projected.json', 'r', encoding='utf-8') as file1:
+    with open('../VT/VT_01_just_pages_and_names.json', 'r', encoding='utf-8') as file1:
         json_obj.append(json.load(file1))
     all_values[0] = extract_all_values(json_obj[0])
 except FileNotFoundError:
@@ -32,8 +33,9 @@ except FileNotFoundError:
 except json.JSONDecodeError:
     print("Erreur lors du chargement du fichier f161_1_projected.json.")
 
+# Généré
 try:
-    with open('../output/f161.json', 'r', encoding='utf-8') as file2:
+    with open('../from_VT_to_EVAL/test_epure_from_corrected_text_p02.json', 'r', encoding='utf-8') as file2:
         json_obj.append(json.load(file2))
     all_values[1] = extract_all_values(json_obj[1])
 except FileNotFoundError:
@@ -61,15 +63,15 @@ for i in range(n1):
 
 # print(similarity_matrix)
 
-# df = pd.DataFrame(similarity_matrix, index=text_values1, columns=text_values2)
-# plt.figure(figsize=(15, 12))
-# sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein'})
-# plt.title("Matrice de Similarité basée sur la Distance de Levenshtein")
-# plt.show()
-
-log_similarity_matrix = np.log1p(similarity_matrix)
-df = pd.DataFrame(log_similarity_matrix, index=text_values1, columns=text_values2)
+df = pd.DataFrame(similarity_matrix, index=text_values1, columns=text_values2)
 plt.figure(figsize=(15, 12))
-sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein (log)'})
-plt.title("Matrice de Similarité basée sur la Distance de Levenshtein (échelle logarithmique)")
+sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein'})
+plt.title("Matrice de Similarité basée sur la Distance de Levenshtein")
 plt.show()
+
+# log_similarity_matrix = np.log1p(similarity_matrix)
+# df = pd.DataFrame(log_similarity_matrix, index=text_values1, columns=text_values2)
+# plt.figure(figsize=(15, 12))
+# sns.heatmap(df, annot=False, cmap="YlGnBu", cbar_kws={'label': 'Distance de Levenshtein (log)'})
+# plt.title("Matrice de Similarité basée sur la Distance de Levenshtein (échelle logarithmique)")
+# plt.show()

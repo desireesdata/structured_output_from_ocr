@@ -190,3 +190,28 @@ Bien à toi,
 
 Sébastien
 
+
+
+
+
+Bonjour,
+
+Je suis également étudiant en Archives; j'étudie à l'Ecole Nationale des Chartes en stage pour le projet Mezanno. Je travaille sur mon temps libre sur une application dédié à l'indexation des instruments de recherche (); je ne suis donc pas un expert en IA, mais m'affaire aux problématiques d'indexation automatisés. Je peux vous donner un retour d'expérience en tant que ...
+
+Pour répondre à vos questions : les traitements à déployer pour l'indexation des données dépendent d'abord de leur nature: s'agit-il de documents numérisés ? Déjà OCRisés ? Des données de "qualité", transcrites à la main ? Si les données ont déjà une structure, peut-être que des méthodes "rudimentaires" d'extraction suffiront. Pour des images, Transkribus ...
+
+Ensuite, pour les méthodes d'indexation via IA, il existe en gros plusieurs méthodes, pouvant être couplées :
+
+- les approches "BERT"
+- les approches LLM
+- les embeddings (représentations vectorielles)
+- le LDA (pour les thématiques)
+- simple extraction via Regex
+
+Les approches Bert reposent sur l'étiquetage de chaque élément textuel. L'avantage du BERT est d'appliquer une "couche sémantique" au dessus du texte. Pour des besoins d'indexation, on peut donc ensuite "matcher" tous les documents ayant telle ou telle étiquette, par exemple "LOCATION", "PERSON", etc. voire des catégories personnalisées comme "OUVRIERE", "CHEF D'ATELIER", etc. Ici, n'y a donc pas vraiment de risque d'hallucination (dans le sens que le texte d'origine n'est pas modifié) et on peut avoir des catégories "taillés" pour besoins très spécifiques (note: un modèle Bert peut échouer à bien catégoriser une entité, par exemple confondre une institution avec le nom d'un lieu). Le problème principal est que les modèles doivent être entraînés pour être efficaces, et c'est un travail qui implique beaucoup de préparation.
+
+On peut utiliser également les LLM (à l'instar de Chat GPT ou Mistral) pour l'indexation; mais à condition de les utiliser d'une certaine façon, à savoir : la sortie structurée ou la génération structurée. L'idée est d'imposer au modèle un format de sortie (sortie structurée) le forçant ainsi à ne répondre que certains choix parmis ceux soumis. L'avantage ici est de bénéficier d'un modèle de langue déjà très pertinent, sans recourir à un entrainement du modèle. C'est la méthode que j'utilise pour mon application; et qui est utilisée par le projet Mezanno, encore en cours de developpement mais en bonne voie de finalisation. Il existe une version encore plus puissante de cette approche, la génération structurée. Ici, on manipule avec des automates finis (des sortes de graphe de possibilités qu'on aura déterminés en amont) les probabilités de chaque token pouvant être exprimés par un LLM. Pour faire bref, dans la philosophie de la génération ou sortie structurée on utilise la capacité d'analyse d'un LLM et on lui demande de ne répondre qu'avec des choix qu'on lui aura imposés. 
+
+Mais, évidemment ces techniques de pointe peuvent ne pas être forcément utiles, selon la nature des données : en effet des données brutes mais déjà bien structurées peuvent être exploités avec une simple expression régulière (regex).
+
+D'expérience, sur des données peu structurée, il n'y a jamais de solution miracle : il y a toujours des exceptions  
