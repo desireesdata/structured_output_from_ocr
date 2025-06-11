@@ -193,13 +193,17 @@ A. 4 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR 
 
 > Note : ??? OCR brut semble mieux marcher ?.
 > Note 2 : Complexité maximale ici !! Parce que je ne sais pas a priori comment ou quand le mécanisme d'attention peut d
-> Note 3: exiger une distance de Lev à 0 pour les numéros pour appariement ?
+
+
+```
+"233" -----(score : 2.00)-----> "738"
+```
 
 B) BIEN APPAREILLER
 
 `generer_appariements.py`
 
-Première chose à faire : vérifier que tout fonctionne en appareillant la vérité terrain avec elle-même ! La somme des coûts de VT vers GENERE doit être égale à zéro.
+0) Première chose à faire : vérifier que tout fonctionne en appareillant la vérité terrain avec elle-même ! La somme des coûts de VT vers GENERE doit être égale à zéro. Extrait :
 
 ```
 "Babin-Chevaye" -----(score : 0.00)-----> "Babin-Chevaye"
@@ -216,5 +220,26 @@ Première chose à faire : vérifier que tout fonctionne en appareillant la vér
 "397" -----(score : 0.00)-----> "397"
 "399" -----(score : 0.00)-----> "399"
 "1211" -----(score : 0.00)-----> "1211"
+```
+> Note : la somme est bien également à zéro : on a des "parallèles".
+
+Ensuite, j'affiche ce qui a été appareillé entre la VT JSON et les différentes sorties structurées produites depuis différentes versions du texte brut :
+
+1) avec le texte brut corrigé (TXT brut)
+2) avec le texte brut obtenu via corpusense avec des zones posées manuellement
+3) avec le texte brut obtenu via corpusense avec des zones obtenus via la Document Layout Detection
+4) avec le texte brut sans détection de mise en page 
+
+> Note 3: exiger une distance de Lev à 0 pour les numéros pour appariement ?
+
+En effet, pour `assignations/02_assignations.txt` (ligne 77):
+
+```
+"1775" -----(score : 0.00)-----> "1775"
+"1816" -----(score : 0.00)-----> "1816"
+"233" -----(score : 2.00)-----> "738"
+"Bérenger (Henry)" -----(score : 0.00)-----> "Bérenger (Henry)"
+"148" -----(score : 0.00)-----> "148"
+"681" -----(score : 0.00)-----> "681"
 ```
 
