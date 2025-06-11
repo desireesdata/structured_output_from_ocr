@@ -159,6 +159,8 @@ Pour effectuer un Zeitgeist-like (façon Google), une autre proposition, sans le
 ## Produire résultats statistiques à partir de la VT (page 2):
 
 ### A) CREER DES MATRICES
+Cas où la page commence par une entrée et dernière entrée non coupée.
+
 Avec Modèle épuré
 	- 1. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
 	- 2. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles via CORPUSENSE

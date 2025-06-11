@@ -10,7 +10,7 @@
     },
     {
       "nom": "Bachelet (Alexandre)",
-      "references_pages": []
+      "references_pages": "Alexandre Bachelet"
     },
     {
       "nom": "Barthou (Louis)",
@@ -95,6 +95,7 @@
         1285,
         1549,
         1552,
+        1747,
         1586,
         1590,
         1762,
@@ -163,13 +164,7 @@
         896,
         616,
         1099,
-        1764
-      ]
-    },
-    {
-      "nom": "Blaignan (Raymond)",
-      "references_pages": [
-        112,
+        1764,
         448,
         449,
         539,
@@ -223,7 +218,8 @@
         376,
         379,
         406,
-        784
+        784,
+        1590
       ]
     },
     {
@@ -262,12 +258,17 @@
     },
     {
       "nom": "Bosc (Jean)",
-      "references_pages": []
+      "references_pages": "Jean Bosc"
     },
     {
-      "nom": "Bourdeaux (Henry)",
+      "nom": "Blaignan (Raymond)",
+      "references_pages": "Raymond Blaignan"
+    },
+    {
+      "nom": "Bordeaux (Henry)",
       "references_pages": [
         799,
+        738,
         1066
       ]
     }

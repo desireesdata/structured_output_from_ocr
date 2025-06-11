@@ -26,9 +26,7 @@
     },
     {
       "nom": "Bazile (Gaston)",
-      "references_pages": [
-        1560
-      ]
+      "references_pages": []
     },
     {
       "nom": "Beaumont (Jean)",
@@ -52,9 +50,7 @@
     },
     {
       "nom": "Bender",
-      "references_pages": [
-        966
-      ]
+      "references_pages": []
     },
     {
       "nom": "Bérard (Léon)",
@@ -84,6 +80,7 @@
         461,
         462,
         958,
+        982,
         1053,
         1054,
         1064,
@@ -141,7 +138,6 @@
         317,
         508,
         603,
-        896,
         616,
         1099,
         1764
@@ -215,9 +211,7 @@
     },
     {
       "nom": "Bon",
-      "references_pages": [
-        1417
-      ]
+      "references_pages": []
     },
     {
       "nom": "Borgeot (Charles)",
@@ -237,9 +231,7 @@
     },
     {
       "nom": "Borrel (Antoine)",
-      "references_pages": [
-        1418
-      ]
+      "references_pages": []
     },
     {
       "nom": "Bosc (Jean)",

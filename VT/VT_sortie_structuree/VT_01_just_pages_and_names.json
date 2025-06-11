@@ -2,7 +2,7 @@
     "listes_des_intervenants": [
         {
             "nom": "Babin-Chevaye",
-            "references_page": [
+            "references_pages": [
                 8,
                 582,
                 719
@@ -10,17 +10,17 @@
         },
         {
             "nom": "Bachelet Alexandre",
-            "nom_entree_du_renvoi": "V. Alexandre Bachelet"
+            "references_pagess": "V. Alexandre Bachelet"
         },
         {
-            "nom": "Barthou Louis",
-            "references_page": [
+            "nom": "Barthou (Louis)",
+            "references_pages": [
                 2
             ]
         },
         {
-            "nom": "Barthou Louis",
-            "references_page": [
+            "nom": "Barthou (Louis)",
+            "references_pages": [
                 394,
                 396,
                 397,
@@ -30,14 +30,14 @@
             ]
         },
         {
-            "nom": "Bazile Gaston",
-            "references_page": [
+            "nom": "Bazile (Gaston)",
+            "references_pages": [
                 1560
             ]
         },
         {
-            "nom": "Beaumont Jean",
-            "references_page": [
+            "nom": "Beaumont (Jean)",
+            "references_pages": [
                 477,
                 1087,
                 1130,
@@ -48,8 +48,8 @@
             ]
         },
         {
-            "nom": "Bénard Léonus",
-            "references_page": [
+            "nom": "Bénard (Léonus)",
+            "references_pages": [
                 146,
                 148,
                 832
@@ -57,13 +57,13 @@
         },
         {
             "nom": "Bender",
-            "references_page": [
+            "references_pages": [
                 966
             ]
         },
         {
-            "nom": "Bérard Léon",
-            "references_page": [
+            "nom": "Bérard (Léon)",
+            "references_pages": [
                 35,
                 132,
                 172,
@@ -115,8 +115,8 @@
             ]
         },
         {
-            "nom": "Bérard Victor",
-            "references_page": [
+            "nom": "Bérard (Victor)",
+            "references_pages": [
                 229,
                 233,
                 286,
@@ -134,8 +134,8 @@
             ]
         },
         {
-            "nom": "Bérenger Henry",
-            "references_page": [
+            "nom": "Bérenger (Henry)",
+            "references_pages": [
                 148,
                 681,
                 754,
@@ -150,8 +150,8 @@
             ]
         },
         {
-            "nom": "Bergeon Benoît-Charles",
-            "references_page": [
+            "nom": "Bergeon (Benoît-Charles)",
+            "references_pages": [
                 517,
                 520,
                 521,
@@ -163,8 +163,8 @@
             ]
         },
         {
-            "nom": "Betoulle Léon",
-            "references_page": [
+            "nom": "Betoulle (Léon)",
+            "references_pages": [
                 317,
                 508,
                 603,
@@ -175,8 +175,8 @@
             ]
         },
         {
-            "nom": "Blaignan Raymond",
-            "references_page": [
+            "nom": "Blaignan (Raymond)",
+            "references_pages": [
                 112,
                 448,
                 449,
@@ -186,7 +186,7 @@
         },
         {
             "nom": "Blaisot",
-            "references_page": [
+            "references_pages": [
                 651,
                 654,
                 656,
@@ -201,8 +201,8 @@
             ]
         },
         {
-            "nom": "Blois comte Louis de",
-            "references_page": [
+            "nom": "Blois (comte Louis de)",
+            "references_pages": [
                 72,
                 402,
                 569,
@@ -225,7 +225,7 @@
         },
         {
             "nom": "Boivin-Champeaux",
-            "references_page": [
+            "references_pages": [
                 1,
                 344,
                 376,
@@ -236,20 +236,20 @@
             ]
         },
         {
-            "nom": "Bompard Maurice",
-            "references_page": [
+            "nom": "Bompard (Maurice)",
+            "references_pages": [
                 754
             ]
         },
         {
             "nom": "Bon",
-            "references_page": [
+            "references_pages": [
                 1417
             ]
         },
         {
-            "nom": "Borgeot Charles",
-            "references_page": [
+            "nom": "Borgeot (Charles)",
+            "references_pages": [
                 460,
                 738,
                 809,
@@ -264,18 +264,18 @@
             ]
         },
         {
-            "nom": "Borrel Antoine",
-            "references_page": [
+            "nom": "Borrel (Antoine)",
+            "references_pages": [
                 1418
             ]
         },
         {
-            "nom": "Bosc Jean",
-            "nom_entree_du_renvoi": "V. Jean Bosc"
+            "nom": "Bosc (Jean)",
+            "references_pagess": "V. Jean Bosc"
         },
         {
-            "nom": "Bourdeaux Henry",
-            "references_page": [
+            "nom": "Bourdeaux (Henry)",
+            "references_pages": [
                 799,
                 1066
             ]
