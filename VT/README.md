@@ -159,7 +159,10 @@ Pour effectuer un Zeitgeist-like (façon Google), une autre proposition, sans le
 ## Produire résultats statistiques à partir de la VT (page 2):
 
 ### A) CREER DES MATRICES
-Cas où la page commence par une entrée et dernière entrée non coupée.
+
+`generer_matrices.py`
+
+Cas où la page commence par une entrée et dernière entrée non coupée. ((ici j'ai masque pour tous les cas les orphelines))
 
 Avec Modèle épuré
 	- 1. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
@@ -173,6 +176,9 @@ Aevc Modèle Moyen
 	- 7. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
 	- 8. Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
 
+A.0 Matrice de coût entre la vérité terrain JSON vers elle-même pour avoir un référentiel
+![A0](img/A_0.png)
+
 A.1 Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
 ![A1](img/A_1.png)
 
@@ -185,5 +191,30 @@ A.3 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR a
 A. 4 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut 
 ![A4](img/A_4.png)	
 
+> Note : ??? OCR brut semble mieux marcher ?.
+> Note 2 : Complexité maximale ici !! Parce que je ne sais pas a priori comment ou quand le mécanisme d'attention peut d
+> Note 3: exiger une distance de Lev à 0 pour les numéros pour appariement ?
 
 B) BIEN APPAREILLER
+
+`generer_appariements.py`
+
+Première chose à faire : vérifier que tout fonctionne en appareillant la vérité terrain avec elle-même ! La somme des coûts de VT vers GENERE doit être égale à zéro.
+
+```
+"Babin-Chevaye" -----(score : 0.00)-----> "Babin-Chevaye"
+"8" -----(score : 0.00)-----> "8"
+"582" -----(score : 0.00)-----> "582"
+"719" -----(score : 0.00)-----> "719"
+"Bachelet Alexandre" -----(score : 0.00)-----> "Bachelet Alexandre"
+"V. Alexandre Bachelet" -----(score : 0.00)-----> "V. Alexandre Bachelet"
+"Barthou (Louis)" -----(score : 0.00)-----> "Barthou (Louis)"
+"2" -----(score : 0.00)-----> "2"
+"Barthou (Louis)" -----(score : 0.00)-----> "Barthou (Louis)"
+"394" -----(score : 0.00)-----> "394"
+"396" -----(score : 0.00)-----> "396"
+"397" -----(score : 0.00)-----> "397"
+"399" -----(score : 0.00)-----> "399"
+"1211" -----(score : 0.00)-----> "1211"
+```
+
