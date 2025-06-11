@@ -55,7 +55,7 @@ except json.JSONDecodeError:
 
 # Généré
 try:
-    with open('./GENERATED_sorties_structuree/01_sortie_structuree_depuis_OCR_TXT_as_VT.json', 'r', encoding='utf-8') as file2:
+    with open('./GENERATED_sorties_structuree/04_corpusense_sortie_structuree_depuis_OCR_brut.json', 'r', encoding='utf-8') as file2:
         json_obj.append(json.load(file2))
     all_values[1] = extract_all_values(json_obj[1])
 except FileNotFoundError:
@@ -80,7 +80,7 @@ for i in range(n1):
         distance = Levenshtein.distance(text_values1[i], text_values2[j])
         similarity_matrix[i][j] = distance
 
-cote = "A_1"
+cote = "A_4"
 unique_columns = make_columns_unique(text_values2)
 with open(f'{cote}_OCR_corrige.npy', 'wb') as f:
     np.save(f, similarity_matrix)

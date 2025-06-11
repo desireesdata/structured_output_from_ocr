@@ -45,13 +45,13 @@ def main():
                 "Avant tout, sachez qu'il y a une entrée par personne et que, juste pour le contexte, les personnes mentionnées ont participé à l'activité du Sénat."
                 "Ce sont en général ses sénateurs, des ministres, des sous-secrétaires, etc."
          
-                "Chaque entrée se compose : du nom et du prénom d'un intervenant; parfois de son rôle (ce n'est pas toujours précisé); d'une liste d'actions qu'il a effectuées ou qui le concernent."
+                "Chaque entrée se compose : du nom et parfois du prénom d'un intervenant; parfois de son rôle (ce n'est pas toujours précisé); d'une liste d'actions qu'il a effectuées ou qui le concernent."
 
                 "Chaque action concernant un intervenant est en général lié à un ou plusieurs numéros de page. Quand il y a une référence de page, vous pouvez être certain qu'il s'agit d'une référence d'une action concernant l'intervenant. "
 
-                "Dans le cas où une entrée n'expose pas des actions ou des faits et/ou des pages concernant un intervenant, mais une simple mention nominale, alors il s'agit d'un renvoi d'index. Dans ce cas, indiquez la référence du renvoi (str). Ces renvois sont en général des noms/prénoms d'intervenants. Ces renvois ne font donc pas référence à des pages, mais à d'autres entrées nominales."
+                "Dans le cas où une entrée n'expose pas des actions ou des faits et/ou des pages concernant un intervenant, mais une simple mention nominale, alors il s'agit d'un renvoi d'index. Dans ce cas, il faudra indiquer la référence du renvoi (str). Ces renvois sont en général des noms/prénoms d'intervenants. Ces renvois ne font donc pas référence à des pages, mais à d'autres entrées nominales."
 
-                "VOICI DONC LES INFORMATIONS A EXTRAIRE : Je veux donc que vous me donniez les noms (et prénoms s'il y en a); ainsi que les numéros de pages OU, s'il n'y en a pas, la référence du renvoi."
+                "VOICI DONC LES INFORMATIONS A EXTRAIRE : Je veux donc que vous me donniez les noms (et les prénoms s'il y en a); ainsi que les numéros de pages OU, s'il n'y en a pas, la référence du renvoi."
         
                 
                 ""

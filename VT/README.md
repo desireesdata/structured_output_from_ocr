@@ -176,7 +176,14 @@ Aevc Modèle Moyen
 A.1 Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
 ![A1](img/A_1.png)
 
-1.2 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles via CORPUSENSE
+A.2 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles via CORPUSENSE
 ![A2](img/A_2.png)	
+
+A.3 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection via CORPUSENSE 
+![A3](img/A_3.png)	
+
+A. 4 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut 
+![A4](img/A_4.png)	
+
 
 B) BIEN APPAREILLER
