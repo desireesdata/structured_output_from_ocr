@@ -10,7 +10,7 @@
     },
     {
       "nom": "Bachelet (Alexandre)",
-      "references_pages": []
+      "references_pages": "Alexandre Bachelet"
     },
     {
       "nom": "Barthou (Louis)",
@@ -26,7 +26,9 @@
     },
     {
       "nom": "Bazile (Gaston)",
-      "references_pages": []
+      "references_pages": [
+        1560
+      ]
     },
     {
       "nom": "Beaumont (Jean)",
@@ -50,7 +52,9 @@
     },
     {
       "nom": "Bender",
-      "references_pages": []
+      "references_pages": [
+        966
+      ]
     },
     {
       "nom": "Bérard (Léon)",
@@ -80,6 +84,7 @@
         461,
         462,
         958,
+        982,
         1053,
         1054,
         1064,
@@ -90,6 +95,7 @@
         1285,
         1549,
         1552,
+        1747,
         1586,
         1590,
         1762,
@@ -198,7 +204,8 @@
         376,
         379,
         406,
-        784
+        784,
+        1590
       ]
     },
     {
@@ -209,7 +216,9 @@
     },
     {
       "nom": "Bon",
-      "references_pages": []
+      "references_pages": [
+        1417
+      ]
     },
     {
       "nom": "Borgeot (Charles)",
@@ -229,17 +238,18 @@
     },
     {
       "nom": "Borrel (Antoine)",
-      "references_pages": []
+      "references_pages": [
+        1418
+      ]
     },
     {
       "nom": "Bosc (Jean)",
-      "references_pages": []
+      "references_pages": "Jean Bosc"
     },
     {
       "nom": "Bourdeaux (Henry)",
       "references_pages": [
         799,
-        738,
         1066
       ]
     }

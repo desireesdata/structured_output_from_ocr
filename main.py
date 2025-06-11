@@ -10,7 +10,7 @@ import json
 
 model = "ministral-8b-latest"
 client = Mistral(api_key=api_key)
-texte = get_text_from_file("./VT/sources/04_corpusense_zone_OCR_brut.txt", False)
+texte = get_text_from_file("./VT/sources/01_VT_OCR.txt", False)
 # texte = get_text_from_file("./input/tests_VT/corrected_page_2_OCR_VT.txt", False)
 
 class Action(BaseModel):
@@ -71,7 +71,7 @@ def main():
     )
     entries_dict = json.loads(entries.choices[0].message.content)
     entry_list = IntervenantAuSenat(**entries_dict)
-    with open('./output/vt/04_corpusense_sortie_structuree_depuis_OCR_brut_.json', 'w', encoding='utf-8') as f:
+    with open('./output/vt/01_VT_OCR.json', 'w', encoding='utf-8') as f:
         json.dump(entry_list.model_dump(), f, ensure_ascii=False, indent=2)
     print(entries.choices[0].message.content)  
     return "Success ! \n \n \n"  
