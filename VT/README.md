@@ -250,3 +250,5 @@ En effet, pour `assignations/02_assignations.txt` (ligne 77):
 > Suite : remettre les orphlines dans le texte brut; reproduire les générations structurées; recalculer les matrices et réappareiller pour avoir comparaison.
 
 Mais avant : revoir assignations : car il faut aussi afficher les données qui n'ont pas été appareillées !!!!
+
+> Note : est-on sûr que la linear sum alignement est vraiment bien ? REP : oui : en fait les "non" match viennent d'un nombre de données générées inférieures/inexistante que dans la VT (1593). Il y a une "saccade".

@@ -2,8 +2,8 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 import json
 
-version = "A_4"
-file_path = f'./matrices/{version}_OCR_corrige.npy'
+version = "A_0"
+file_path = f'./matrices/{version}_JSON_VT_vers_JSON_VT.npy'
 similarity_matrix = np.load(file_path)
 
 json_obj = []
@@ -35,7 +35,7 @@ except Exception as e:
 
 # SORTIE STRUCTUREE GENEREE à partir de telle ou tel source TXT (avec DLD via Corpusense, sans, etc)
 try:
-    with open('./GENERATED_sorties_structuree/04_corpusense_sortie_structuree_depuis_OCR_brut.json', 'r', encoding='utf-8') as file2:
+    with open('./VT_sortie_structuree/VT_01_just_pages_and_names.json', 'r', encoding='utf-8') as file2:
         json_obj.append(json.load(file2))
     all_values[1] = extract_all_values(json_obj[1])
 except Exception as e:
