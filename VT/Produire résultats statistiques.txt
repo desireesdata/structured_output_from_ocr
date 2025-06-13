@@ -2,7 +2,7 @@ Produire résultats statistiques à partir de la VT (page 2):
 
 A) CREER DES MATRICES
 Avec Modèle épuré
-	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé
+	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR Corrigé VT
 	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone manuelles
 	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR avec Zone obtenues via Document Layout Detection
 	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
@@ -15,3 +15,4 @@ Aevc Modèle Moyen
 	- Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR brut ?
 	
 B) BIEN APPAREILLER
+

@@ -243,3 +243,4 @@ En effet, pour `assignations/02_assignations.txt` (ligne 77):
 "681" -----(score : 0.00)-----> "681"
 ```
 
+> Suite : remettre les orphlines dans le texte brut; reproduire les générations structurées; recalculer les matrices et réappareiller pour avoir comparaison.
