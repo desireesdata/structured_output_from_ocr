@@ -195,6 +195,8 @@ A. 4 Obtenir Matrice de coût (lev) avec la génération structurée depuis OCR 
 > Note 2 : Complexité maximale ici !! Parce que je ne sais pas a priori comment ou quand le mécanisme d'attention peut d
 
 
+> Inutitle de faire - 2. génération structurée depuis OCR avec Zone manuelles via CORPUSENSE
+
 ```
 "233" -----(score : 2.00)-----> "738"
 ```
@@ -244,3 +246,5 @@ En effet, pour `assignations/02_assignations.txt` (ligne 77):
 ```
 
 > Suite : remettre les orphlines dans le texte brut; reproduire les générations structurées; recalculer les matrices et réappareiller pour avoir comparaison.
+
+Mais avant : revoir assignations : car il faut aussi afficher les données qui n'ont pas été appareillées !!!!
