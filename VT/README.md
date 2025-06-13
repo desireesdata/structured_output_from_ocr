@@ -245,6 +245,8 @@ En effet, pour `assignations/02_assignations.txt` (ligne 77):
 "681" -----(score : 0.00)-----> "681"
 ```
 
+![A2](img/notes.jpeg)	
+
 > Suite : remettre les orphlines dans le texte brut; reproduire les générations structurées; recalculer les matrices et réappareiller pour avoir comparaison.
 
 Mais avant : revoir assignations : car il faut aussi afficher les données qui n'ont pas été appareillées !!!!
