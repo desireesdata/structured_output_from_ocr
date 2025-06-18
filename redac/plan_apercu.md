@@ -20,23 +20,7 @@ Plan mémoire :
   
   - Conclure intro sur mon positionnement/rôle : du besoin de mettre à disposition des outils d'évaluation, avec le J.O. comme cas d'étude, pour pouvoir avoir une utilsation raisonnée / motivée des outils en SHS, comportant des biais.
 
-- **Partie 1 : le Projet Mezanno. Aspects institutionnels et techniques**
-  
-  - Contexte institutionnel : projet Soduco, AGODA. Liens BnF/EHESS/IGN/Epita. ANR.
-  
-  - Problématique de départ sur l'annotation des sources (consortium IIIF).
-    
-    - Journée d'études janvier 2025.
-    
-    - Différentes approches : eScriptorium, AIkon, etc.
-  
-  - Outil Corpusense (en développement)
-    
-    - "les instruments sont de la théorie réifiée" : exposer le workflow, de l'image OCRisée à la donnée structurée pour l'historien.ne
-    
-    - Différences avec les autres solutions : la génération structurée et la spécialisation de documents sériels.
-
-- **Parie 2 : Les sources**. 
+  - **Parie 1 : Les sources**. 
   
   - Le J.O. de la IIIeme République : horizon historique
     
@@ -61,6 +45,23 @@ Plan mémoire :
     - Problème de l'anachronisme des catégories : biais des modèles VS cadre énonciatif du XXe siècle. (Lemercier, Foucault, Loraux)
     
     - LLMs et lecture à distance : produire d' "hallucinants" résultats ? ==> mentionner l'approche LLM pour extraire des données structurées. C'est l'approche retenue pour Mezanno (car facile à mettre en place). Mais, on ne peut pas utiliser scientifiquement des résultats produits par des LLMs, sachant ses limitations.
+
+- **Partie 2 : le Projet Mezanno. Aspects institutionnels et techniques**
+  
+  - Contexte institutionnel : projet Soduco, AGODA. Liens BnF/EHESS/IGN/Epita. ANR.
+  
+  - Problématique de départ sur l'annotation des sources (consortium IIIF).
+    
+    - Journée d'études janvier 2025.
+    
+    - Différentes approches : eScriptorium, AIkon, etc.
+  
+  - Outil Corpusense (en développement)
+    
+    - "les instruments sont de la théorie réifiée" : exposer le workflow, de l'image OCRisée à la donnée structurée pour l'historien.ne
+    
+    - Différences avec les autres solutions : la génération structurée et la spécialisation de documents sériels.
+
 
 - **Partie 3 : Mise en application (Cas d'étude : le table de 1931.). Evaluation de l'approche de la sortie structurée**
   

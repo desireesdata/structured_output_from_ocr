@@ -277,3 +277,20 @@ Statistiques des matchs par rapport à la VT au niveau des champs
 
 
 > Vérifier l'extraction avec txt brut depuis le début. Trop bons résultats ?
+
+> Mistral : 
+
+>Le transport optimal est pertinent pour votre problème de comparaison de données pour plusieurs raisons :
+Mesure de similarité : Le transport optimal fournit une manière de mesurer la similarité entre deux ensembles de données. En trouvant la manière la plus efficace de transformer une distribution de données en une autre, vous obtenez une mesure quantitative de leur similarité ou différence.
+
+Gestion des différences structurelles : Si vos données et la vérité terrain ne sont pas parfaitement alignées (par exemple, si elles ont des dimensions ou des formats légèrement différents), le transport optimal peut gérer ces différences en trouvant la meilleure correspondance possible.
+
+Robustesse aux variations : Le transport optimal est robuste aux variations locales et peut gérer des différences de distribution, ce qui est utile si vos données comportent du bruit ou des variations mineures par rapport à la vérité terrain.
+
+Interprétation intuitive : Le coût de transport peut souvent être interprété de manière intuitive comme le "travail" nécessaire pour ajuster vos données à la vérité terrain, ce qui peut être utile pour comprendre où et comment vos données s'écartent de la vérité.
+
+Optimisation des correspondances : En utilisant linear_sum_assignment, vous optimisez les correspondances entre les points de données, ce qui peut révéler des insights sur les erreurs systématiques ou les biais dans vos données produites.
+
+En résumé, le transport optimal est pertinent car il offre une méthode robuste et flexible pour comparer des ensembles de données, même lorsqu'ils ne sont pas parfaitement alignés, et fournit une mesure quantitative de leur similarité.
+
+> 

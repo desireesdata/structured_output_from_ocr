@@ -42,7 +42,7 @@ def main():
                 "content": ""
                 "Extrayez du texte que je vais vous donner, des informations de chaque entrée, lesquelles sont chacunes relatives à une personne."
 
-                "Avant tout, sachez qu'il y a une entrée par personne et que, juste pour le contexte, les personnes mentionnées ont participé à l'activité du Sénat."
+                "Avant tout, sachez qu'il y a une entrée par personne et que, pour le contexte, les personnes mentionnées ont participé à l'activité du Sénat."
                 "Ce sont en général ses sénateurs, des ministres, des sous-secrétaires, etc."
          
                 "Chaque entrée se compose : du nom et parfois du prénom d'un intervenant; parfois de son rôle (ce n'est pas toujours précisé); d'une liste d'actions qu'il a effectuées ou qui le concernent."
