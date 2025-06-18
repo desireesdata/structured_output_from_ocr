@@ -10,7 +10,7 @@ Plan mémoire :
     
     - Mentionner des réponses techniques existantes à ces enjeux (eScriptorium, Aikon, etc.)
   
-  - Exposer problématiques propres à l'extraction de l'information des documents sériels, matière "taillée" pour les approches quanti qui est constitutif du positionnement de Mezanno (BnF/EPITA/IGN/EHESS) : 
+  - Exposer problématiques propres à l'extraction de l'information des documents sériels, matière "taillée" pour les approches quanti et constitutive du positionnement de Mezanno (BnF/EPITA/IGN/EHESS) : 
     
     - Mentionner "les fruits faciles" (même si pas trival) des documents sériels, 
     
